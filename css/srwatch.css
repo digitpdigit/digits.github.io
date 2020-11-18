@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5em;
+  width: 100%;
+  padding: 1em;
+  background-color: black;
+  border-style: solid;
+  border-color: #292000;
+  border-width: 0px 0px 1.5px 0px;
+  position: fixed;
+  z-index: 2;
+}
+
+header .back-btn {
+  color: white;
+  display: block;
+  text-decoration: none;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+header .hamburger {
+  height: 31px;
+}
+
+header .cart {
+  height: 35px;
+}
+
+header .logo {
+  height: 65px;
+}
+
+header .menu {
+  padding: 0;
+  position: absolute;
+  top: 5em;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(248, 248, 248, 0.87);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  display: none;
+}
+
+header .menu a {
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+
+header .menu h2 {
+  font-family: "Montserrat";
+  font-size: 1.15em;
+  color: #FFFFFF;
+  line-height: 150%;
+  letter-spacing: 0.12em;
+  color: black;
+  background-color: initial;
+  margin-top: 1.5em;
+}
+
+.container {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 5em;
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+}
+
+.container section {
+  margin-bottom: 5em;
+  height: 100vh;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home img {
+  width: 90vw;
+  margin-bottom: 1.5em;
+}
+
+.home h1 {
+  font-family: "Bebas Neue";
+  font-size: 2.3em;
+  color: #FFFFFF;
+  line-height: 150%;
+}
+
+.home h2 {
+  font-family: "Montserrat";
+  font-size: 1.15em;
+  color: #FFFFFF;
+  line-height: 150%;
+  letter-spacing: 0.12em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 2.5em;
+  text-align: left;
+}
+
+.main h1 {
+  font-family: "Bebas Neue";
+  font-size: 2.3em;
+  color: #FFFFFF;
+  line-height: 150%;
+  margin-bottom: 0.75em;
+}
+
+.main p {
+  font-family: "Montserrat";
+  font-size: 1em;
+  color: #FFFFFF;
+  line-height: 150%;
+  margin-bottom: 0.75em;
+  font-weight: normal;
+}
+
+.catalogue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.catalogue .container-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.catalogue .container-content h1 {
+  font-family: "Bebas Neue";
+  font-size: 2.3em;
+  color: #FFFFFF;
+  line-height: 150%;
+  margin-bottom: 0.75em;
+}
+
+.catalogue .container-content h1:after {
+  background-image: url("../img/Sr/cart.png");
+  background-size: 35px;
+  display: inline-block;
+  width: 35px;
+  height: 27px;
+  content: "";
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.catalogue .container-content:after {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.catalogue .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.catalogue .img-container div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 50%;
+          flex: 0 50%;
+  margin-bottom: 2em;
+}
+
+.catalogue .img-container div p {
+  font-family: "Montserrat";
+  font-size: 1em;
+  color: #FFFFFF;
+  line-height: 150%;
+}
+
+@media (min-width: 100vh) {
+  .catalogue .img-container div img {
+    width: 35vh;
+  }
+}
+
+@media (min-height: 100vw) {
+  .catalogue .img-container div img {
+    width: 35vw;
+  }
+}
+
+footer {
+  background-color: #292000;
+  height: 10vh;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+footer p {
+  font-family: "Montserrat";
+  font-size: 1em;
+  color: #FFFFFF;
+  line-height: 150%;
+  font-size: 0.83333em;
+  color: white;
+}
+
+footer .logo-container img {
+  width: 26.13px;
+}
+
+@media (min-width: 48em) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 5em;
+    width: 100%;
+    padding: 1em;
+    background-color: black;
+    border-style: solid;
+    border-color: #292000;
+    border-width: 0px 0px 0px 0px;
+    position: fixed;
+    z-index: 2;
+  }
+  header .hamburger {
+    display: none;
+    height: 31px;
+  }
+  header .cart {
+    display: none;
+    height: 35px;
+  }
+  header .logo {
+    height: 65px;
+  }
+  header .menu {
+    padding: 0;
+    position: absolute;
+    top: 5em;
+    left: 0px;
+    width: 10vw;
+    height: 75vh;
+    background-color: rgba(248, 248, 248, 0);
+    margin-left: 2.5em;
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .menu a {
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+  }
+  header .menu h2 {
+    font-family: "Montserrat";
+    font-size: 1.15em;
+    color: #FFFFFF;
+    line-height: 150%;
+    letter-spacing: 0.12em;
+    color: white;
+    font-size: 0.76667em;
+    background-color: initial;
+    margin-top: 1.5em;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    font-weight: 200;
+  }
+  .container {
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 5em;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
+  .container section {
+    margin-bottom: 5em;
+    height: 100vh;
+  }
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home img {
+    width: 35vw;
+    margin-bottom: -10px;
+  }
+  .home h1 {
+    font-family: "Bebas Neue";
+    font-size: 2.3em;
+    color: #FFFFFF;
+    line-height: 150%;
+  }
+  .home h2 {
+    font-family: "Montserrat";
+    font-size: 1.15em;
+    color: #FFFFFF;
+    line-height: 150%;
+    letter-spacing: 0.12em;
+    font-weight: normal;
+    text-align: center;
+  }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 45vw;
+    padding-right: 2.5em;
+  }
+  .main h1 {
+    font-family: "Bebas Neue";
+    font-size: 2.3em;
+    color: #FFFFFF;
+    line-height: 150%;
+    margin-bottom: 0.75em;
+  }
+  .main p {
+    font-family: "Montserrat";
+    font-size: 1em;
+    color: #FFFFFF;
+    line-height: 150%;
+    margin-bottom: 0.75em;
+    font-weight: normal;
+  }
+  .catalogue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 45vw;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .catalogue h1 {
+    font-family: "Bebas Neue";
+    font-size: 2.3em;
+    color: #FFFFFF;
+    line-height: 150%;
+    margin-bottom: 0.75em;
+  }
+  .catalogue .img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .catalogue .img-container div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 25%;
+            flex: 0 25%;
+    margin-bottom: 2em;
+  }
+  .catalogue .img-container div p {
+    font-family: "Montserrat";
+    font-size: 1em;
+    color: #FFFFFF;
+    line-height: 150%;
+  }
+  .catalogue .img-container div img {
+    width: 10vw;
+  }
+  footer {
+    background-color: #292000;
+    height: 10vh;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: none;
+  }
+  footer p {
+    font-family: "Montserrat";
+    font-size: 1em;
+    color: #FFFFFF;
+    line-height: 150%;
+    font-size: 0.83333em;
+    color: white;
+  }
+  footer .logo-container img {
+    width: 26.13px;
+  }
+}
+/*# sourceMappingURL=srwatch.css.map */

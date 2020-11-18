@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+// Breakpoints
+$bp-small: 48em; // 768px
+
+// Font
+$base-font-size: 1em;
+$title-font-size: 2.3em;
+$content-font-type: 'Montserrat';
+$title-font-type: 'Bebas Neue';
+
+// Line-Height
+$base-line-height: 150%;
+
+// Margins
+$base-margin: 1.5em;
+
+// Colors
+$base-accent-color: #292000;
+$base-color: #0000;
+$base-font-color: #FFFFFF;
+$test-color: grey;
+
+/// ----------------------------- Mobile First
+/// Mixins
+@mixin h1Rule {
+    font-family: $title-font-type;
+    font-size: $title-font-size;
+    color: $base-font-color;
+    line-height: $base-line-height;
+}
+@mixin h2Rule {
+    font-family: $content-font-type;
+    font-size: $title-font-size/2;
+    color: $base-font-color;
+    line-height: $base-line-height;
+}
+@mixin pRule {
+    font-family: $content-font-type;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    line-height: $base-line-height;
+}
+
+/// HEADER
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+     //background-color: $test-color;
+    height: 5em;
+    width:100%;
+    padding:1em;
+    background-color: black;
+    border-style: solid;
+    border-color: $base-accent-color;
+    border-width: 0px 0px 1.5px 0px;
+
+    position: fixed;
+    z-index: 2;
+    .back-btn{
+        color:white;
+        display: block;
+        text-decoration: none;
+        width:2em;
+        height:2em;
+        text-align: center;
+        position: absolute;
+        top:20px;
+        left:20px;
+        
+    }
+    .hamburger{
+        height:31px;
+    }
+    .cart{
+        height: 35px;
+    }
+    .logo{
+        height: 65px;
+    }
+    .menu{
+        padding:0;
+        position: absolute;
+        top:5em;
+        left:0px;
+        width:100vw;
+        height:100vh;
+        background-color: rgba($color: #F8F8F8, $alpha: 0.87);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        a{
+            background-color: rgba(0,0,0,0);
+            text-decoration: none;
+        }
+        h2{
+            @include h2Rule();
+            letter-spacing: 0.12em;
+            color:black;
+            background-color: initial;
+            margin-top: $base-margin;
+            
+        }
+        display: none;
+    }
+}
+
+/// CONTAINER
+.container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height:fit-content;
+    justify-content: space-between;
+    padding-top:5em;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+    section{
+        margin-bottom: 5em;
+        height: 100vh;
+    }
+}
+/// Home
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    img{
+        width:90vw;
+        margin-bottom: $base-margin;
+    }
+    h1{
+        @include h1Rule();
+
+    }
+    h2{
+        @include h2Rule();
+        letter-spacing: 0.12em;
+        font-weight: normal;
+        text-align: center;
+
+    }
+}
+
+/// MAIN
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2.5em;
+    text-align: left;
+    h1{
+        @include h1Rule();
+        margin-bottom: $base-margin/2;
+    }
+    p{
+        @include pRule();
+        margin-bottom: $base-margin/2;
+        font-weight: normal;
+    }
+}
+
+/// CATALOGUE
+.catalogue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+    .container-content{
+        display: flex;
+        width:100%;
+        flex-direction: row;
+        position: relative;
+        
+        
+        h1{
+            @include h1Rule();
+            margin-bottom: $base-margin/2;
+    
+            &:after{
+                background-image: url('../img/Sr/cart.png');
+                background-size: 35px;
+                display: inline-block;
+                width: 35px;
+                height: 27px; 
+                content:"";
+                align-self: flex-end;
+                position: absolute;
+                top:10px;
+                right:10px;
+                
+            }
+        }
+        &:after{
+            justify-content: space-between;
+        }
+        
+    }
+    .img-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+        div{
+            flex:0 50%;
+            margin-bottom: 2em;
+            
+            p{
+                @include pRule();
+            }
+            img{
+                @media (min-width: 100vh){
+                    width:35vh;
+                }
+                @media (min-height: 100vw){
+                    width:35vw;
+                }
+            }
+        }
+    }
+}
+
+/// Footer
+footer{
+    background-color: $base-accent-color;
+    height:10vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    p{
+        @include pRule();
+        font-size: $base-font-size/1.2;
+        color: white;
+    }
+    .logo-container{
+        img{
+            width: 26.13px;
+        }
+    }
+}
+
+/// DESKTOP and Landscape Tablets
+@media (min-width: $bp-small){
+    // Font
+    $base-font-size: 1em;
+    $title-font-size: 2.3em;
+    $content-font-type: 'Montserrat';
+    $title-font-type: 'Bebas Neue';
+    /// Mixins
+    @mixin h1Rule {
+        font-family: $title-font-type;
+        font-size: $title-font-size;
+        color: $base-font-color;
+        line-height: $base-line-height;
+    }
+    @mixin h2Rule {
+        font-family: $content-font-type;
+        font-size: $title-font-size/2;
+        color: $base-font-color;
+        line-height: $base-line-height;
+    }
+    @mixin pRule {
+        font-family: $content-font-type;
+        font-size: $base-font-size;
+        color: $base-font-color;
+        line-height: $base-line-height;
+    }
+
+    /// HEADER
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        //background-color: $test-color;
+        height: 5em;
+        width:100%;
+        padding:1em;
+        background-color: black;
+        border-style: solid;
+        border-color: $base-accent-color;
+        border-width: 0px 0px 0px 0px;
+
+        position: fixed;
+        z-index: 2;
+        .hamburger{
+            display:none;
+            height:31px;
+        }
+        .cart{
+            display:none;
+            height: 35px;
+        }
+        .logo{
+            height: 65px;
+        }
+        .menu{
+            padding:0;
+            position: absolute;
+            top:5em;
+            left:0px;
+            width:10vw;
+            height:75vh;
+            background-color: rgba($color: #F8F8F8, $alpha: 0);
+            margin-left: 2.5em;
+            padding-top: 1.8em;
+            padding-bottom: 1.8em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-between;
+
+            a{
+                background-color: rgba(0,0,0,0);
+                text-decoration: none;
+            }
+            h2{
+                @include h2Rule();
+                letter-spacing: 0.12em;
+                color:white;
+                font-size: $title-font-size/3;
+                background-color: initial;
+                margin-top: $base-margin;
+                transform: rotate(270deg);
+                font-weight: 200;
+                
+                
+            }
+            
+        }
+    }
+
+    /// CONTAINER
+    .container{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height:fit-content;
+        justify-content: space-between;
+        padding-top:5em;
+        padding-right: 2.5em;
+        padding-left: 2.5em;
+        section{
+            margin-bottom: 5em;
+            height: 100vh;
+        }
+    }
+
+    /// Home
+    .home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        img{
+            width:35vw;
+            margin-bottom:-10px;
+        }
+        h1{
+            @include h1Rule();
+
+        }
+        h2{
+            @include h2Rule();
+            letter-spacing: 0.12em;
+            font-weight: normal;
+            text-align: center;
+
+        }
+    }
+
+    /// MAIN
+    .main{
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+        width:45vw;
+        padding-right: 2.5em;
+        
+        h1{
+            @include h1Rule();
+            margin-bottom: $base-margin/2;
+        }
+        p{
+            @include pRule();
+            margin-bottom: $base-margin/2;
+            font-weight: normal;
+        }
+    }
+
+    /// CATALOGUE
+    .catalogue{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45vw;
+        align-self: center;
+        
+        h1{
+            @include h1Rule();
+            margin-bottom: $base-margin/2;
+        }
+        .img-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: space-between;
+            div{
+                flex:0 25%;
+                margin-bottom: 2em;
+                
+                p{
+                    @include pRule();
+                }
+                img{
+                    width: 10vw;
+                }
+            }
+        }
+    }
+
+    /// Footer
+    footer{
+        background-color: $base-accent-color;
+        height:10vh;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        p{
+            @include pRule();
+            font-size: $base-font-size/1.2;
+            color: white;
+        }
+        .logo-container{
+            img{
+                width: 26.13px;
+            }
+        }
+        display: none;
+    }
+
+
+}

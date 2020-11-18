@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/srwatch.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        <title>Sr. Watch</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
+            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
+            crossorigin="anonymous" defer>
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/lax.js" defer></script>
+        <script src="./js/srwatch.js" defer></script>
+    </head>
+    <body>
+        
+        <header>
+            <a class='back-btn' href="./main.html">Back</a>
+            <img src="./img/Sr/logo.png" alt="logo" class="logo">
+            <img src="./img/Sr/cart.png" alt="cart" class="cart">
+            <img onclick='showMenu();' src="./img/Sr/hamburger.png" alt="hamburger" class="hamburger">
+            <div class="menu">
+                <a href="#home"><h2>Home</h2></a>
+                <a href="#main"><h2>About</h2></a>
+                <a href="#catalogue"><h2>Product</h2></a>
+            </div>
+        </header>
+        <div class="container">
+            <section class="home lax" id='home' 
+                data-lax-opacity="(document.body.scrollHeight*0.1) 1, (document.body.scrollHeight*0.2) 0"
+            >
+                <img src="./img/Sr/central watch.png" alt="central" class="central">
+                <h1>Sr. watch</h1>
+                <h2>Be Timeless. Be Luxurious</h2>
+            </section>
+
+            <section class="main lax" id='main'
+                
+                data-lax-opacity="(document.body.scrollHeight*0.2) 0, (document.body.scrollHeight*0.35) 1, (document.body.scrollHeight*0.55) 0"
+                
+            >
+                <h1>What we provide</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet urna malesuada sapien commodo ullamcorper quis at ex. Praesent feugiat odio id mauris gravida, ac congue sapien maximus. Proin a iaculis nunc. Vivamus diam enim, hendrerit a vehicula a, hendrerit vel quam. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet urna malesuada sapien commodo ullamcorper quis at ex.  </p>
+            </section>
+            <section class="catalogue lax" id='catalogue'
+                data-lax-opacity="(document.body.scrollHeight*0.5) 0, (document.body.scrollHeight*0.6) 1"
+                
+            >
+                <div class="container-content">
+                    <h1>catalogue</h1>
+                </div>
+                
+                <div class="img-container">
+                    <div class="card">
+                        <img src="./img/Sr/watch.png" alt="watch">
+                        <p>Pocket</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/Sr/watch.png" alt="watch">
+                        <p>Pocket</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/Sr/watch.png" alt="watch">
+                        <p>Pocket</p>
+                    </div>
+                    <div class="card">
+                        <img src="./img/Sr/watch.png" alt="watch">
+                        <p>Pocket</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Adress and stuffs</p>
+            <div class="logo-container">
+                <img src="./img/Sr/fb.png" alt="">
+                <img src="./img/Sr/ig.png" alt="">
+            </div>
+        </footer>
+    
+    <!-- <script>
+        window.onload = function() {
+            lax.init()
+        
+            // Add a driver that we use to control our animations
+            lax.addDriver('scrollY', function() {
+              return document.body.scrollTop
+            })
+        
+            // Add animation bindings to elements
+            lax.addElements('.lax', {
+              scrollY: {
+                translateX: [
+                  ["elInY", "elCenterY", "elOutY"],
+                  [0, 'screenWidth/2', 'screenWidth'],
+                ]
+              }
+            })
+          }
+    </script> -->
+    <!-- <script >
+        window.onload = function() {
+        lax.setup() // init
+    
+        const updateLax = () => {
+            lax.update(window.scrollY)
+            window.requestAnimationFrame(updateLax)
+        }
+    
+        window.requestAnimationFrame(updateLax)
+    };
+        window.onresize = function() {
+            lax.setup() // init
+    
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+        
+            window.requestAnimationFrame(updateLax)
+    }
+    </script> -->
+    </body>
+</html>

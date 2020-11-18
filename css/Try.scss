@@ -1,0 +1,372 @@
+/// Variables
+// Breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+$mq-desktop: $mq-small;
+
+// Font
+$base-font-size: .95em;
+$title-font-size: 2.2em;
+$base-font-type: Oswald;
+$content-font-type: Open Sans;
+
+// Line-Height
+$base-line-height: 150%;
+$header-line-height: 125%;
+
+// Colors
+$black:black;
+$base-accent-color: #FC4842;
+$base-font-color:white;
+$test-color: grey;
+
+// Transition Settings
+$base-transition-duration: .3s;
+$base-transition-timing: ease-in-out;
+
+// Backgrounds
+$base-background-color: $black;
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    background-color: $base-background-color;
+    color: $base-font-color;
+    font-family: $base-font-type;
+
+    h1{
+      font-style: normal;
+      font-weight: 200;
+      font-size: $title-font-size*.8;
+      letter-spacing: 0.15em;
+      line-height: 150%;
+      margin-bottom: .3em;
+      padding: 0;
+      
+    }
+    p{
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      margin-bottom: 1em;
+      padding: 0;
+      font-size: $base-font-size*.8;
+    }
+
+    a{
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $base-font-size*.6;
+      margin-bottom: 1em;
+      
+    }
+
+  
+    @media #{$mq-medium} {
+      h1{
+        font-style: normal;
+        font-weight: 200;
+        font-size: $title-font-size*1.2;
+        letter-spacing: 0.15em;
+        line-height: 150%;
+        
+      }
+      p{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: 0.15em;
+
+        font-size: $base-font-size*1.2;
+      }
+
+      a{
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $base-font-size*.9;
+      }
+      
+      line-height: $base-line-height*1.2;
+      
+      
+    }
+  
+    @media #{$mq-large} {
+      h1{
+        font-style: normal;
+        font-weight: 200;
+        font-size: $title-font-size*1.3;
+        letter-spacing: 0.15em;
+        line-height: 150%;
+        
+      }
+      p{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: 0.15em;
+
+        font-size: $base-font-size*1.3;
+      }
+      a{
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $base-font-size;
+      }
+      
+    }
+  
+    @media #{$mq-xlarge} {
+      h1{
+        font-style: normal;
+        font-weight: 200;
+        font-size: $title-font-size*1.4;
+        letter-spacing: 0.15em;
+        line-height: 150%;
+        
+      }
+      p{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: 0.15em;
+
+        font-size: $base-font-size*1.4;
+      }
+      a{
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $base-font-size*1.2;
+      }
+      
+      
+   
+    }
+  
+    @media #{$mq-xxlarge} {
+      h1{
+        font-style: normal;
+        font-weight: 200;
+        font-size: $title-font-size*1.6;
+        letter-spacing: 0.15em;
+        line-height: 150%;
+        
+      }
+      p{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: 0.15em;
+
+        font-size: $base-font-size*1.6;
+      }
+      a{
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: bold;
+        font-size: $base-font-size*1.3;
+      }
+      
+  
+    }
+  }
+
+/// DESKTOP
+@media #{$mq-desktop}{
+  .home{
+    display:none;
+  }
+
+  .container{
+    width: 100vw*3;
+    height: 98vh;
+    display: flex;
+    flex-direction: row;
+    
+
+    .content{
+      display: inline-block;
+      background-color: blue;
+      width: 100vw*.55;
+      height: 100vh*.6;
+      margin: auto;
+      
+      
+    }
+  }
+
+  /// About
+  #about{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    #left{
+        width:50%;
+        margin:auto 0;
+        
+        
+        p{
+          .bolds{
+            font-weight: 1000;
+          }
+        }
+        .btn{
+          background-color: white;
+          color:black;
+          text-decoration: none;
+          
+          display: inline-block;
+          padding: 2px 20px;
+          border-radius: 5%;
+          
+      }
+       
+    }
+
+    #right{
+        display: flex;
+        width:50%;
+        
+        align-items: center;
+        justify-content: center;
+        
+        img{
+            transform:scale(.6);
+            
+        }      
+        
+    }
+    
+}
+  /// Works
+  #works{
+    
+    display: flex;
+    flex-direction: column;
+    
+
+    #top{
+        
+        height:40%;
+        
+        
+      .bold{
+        font-weight: bold;
+      }
+    }
+    
+    #bottom{
+        display:flex;
+        flex-direction: row;
+        height:60%;
+        width:100%;
+        justify-content: space-between;
+        position: relative;
+        
+
+        .img-container{
+            display: inline-flex;
+            align-items: center;
+
+            .laptop-container{
+                position: relative;
+                .laptop{
+                    z-index: 2;
+                    width: 229px;
+                    height: 153px;
+                 
+                }
+                .img-link{
+                    z-index:1;
+                    position: absolute;
+                    top:19px;
+                    left:36.5px;
+                    
+                    display: inline-block;
+                    border-radius: 8;
+                    .img-desktop{
+                        width: 156px;
+                        height: 98px;
+    
+                    }
+                }
+            }
+
+            .phone-container{
+                position: relative;
+                display:flex;
+                flex-direction: row;
+                
+                .phone{
+                    z-index: 2;
+                    width: 55px;
+                    height: 87px;
+                   
+                }
+
+                .img-phone{
+                    z-index: 1;
+                    width: 41px;
+                    height: 87px;
+                    top:-1.5px;
+                    left:7px;
+                    position: absolute;
+                    transform: scale(.91);
+
+                }
+                .img-link{
+                    
+                    z-index:3;
+                    position: absolute;
+                    top:-1.5px;
+                    left:7px;
+                    width: 41px;
+                    height: 87px;
+                    transform: scale(.91);
+                    
+                    display: inline-block;
+                    border-radius: 8;
+                    
+                }
+            }
+        }
+    }
+
+}
+  /// Contacts
+  #contacts{
+    display: Flex;
+  }
+} 
+
+/// MOBILE

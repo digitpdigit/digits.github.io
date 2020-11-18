@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./main.css">
+        <title>ITS</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
+            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
+            crossorigin="anonymous" defer>
+        </script>
+        <script src="./main.js" defer></script>
+        
+    </head>
+    <body>
+        
+        <section class="home">
+            
+            
+            <div class="logo">
+                <span id="window"></span>
+                <div class="hero">
+                    <img class='hero' id='pic-left' src="./img/main/pic-left.png" alt="">
+                <img class='hero' id='pic-right' src="./img/main/pic-right.png" alt="">
+                </div>
+                
+            </div>
+
+            <a class='hamburger-btn' href="#" onclick="showFooter();">
+                <img class='hamburger' id='hamburger' src='./img/main/icon/hamburger.png' alt=''>
+            </a>
+            
+            
+            
+        </section>
+
+        <div class='footer' id="footer" >
+            <a href="#about" onclick="scrollToSections(0);"><h1>About</h1></a>
+            <a href="#works" onclick="scrollToSections(400);"><h1>Works</h1></a>
+            <a href="#contacts" onclick="scrollToSections(800);"><h1>Contact</h1></a>
+        </div>
+        
+        <div class="scroll" id='scroll' >
+            <div class="container" data-0='transform:translateX(0%);' data-800='transform:translateX(-66.6%);'>
+                
+                <section id='about' class="content">
+                    <div id='left'>
+                        <h1>UI Designer<br>Web Developer</h1>
+                        <p>Distinct and <span class='bolds'>modern</span> interface with <span class='bolds'>precise</span> functionality
+                            designed to transform boring websites become <span class='bolds'>smart</span> and <span class='bolds'>exciting</span>.</p>
+                        <a href="#" class='btn'>Preview CV</a>
+                    </div>
+                    <div id="right">
+                        <img src="./img/main/me.jpeg" alt="" >
+                    </div>
+                </section>
+
+
+
+                <section id='works' class="content">
+                    <div id='top'>
+                        <h1>Our Works</h1>
+                        <p>Mockup designs on our ideas for modern and responsive websites, with contrasting color scheme.</p>
+                        <p class="bold">Click To Preview!</p>
+                    </div>
+                    <div id="bottom">
+                        <div class="img-container">
+                                <div class="laptop-container">
+                                    <img class='laptop' src="./img/FAVPNG_laptop-macbook-air-computer-monitors_XfSSS15k.png" alt="">
+                                    <a class='img-link' href="./relaxed.html">
+                                        <img class='img-desktop' src="./img/relaxed.png" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="phone-container">
+                                    <img class='phone' src="./img/FAVPNG_iphone-x-cut-out-no-background_1xbuajE1.png" alt="">
+                                    <img class='img-phone' src="./img/relaxed-phone.png" alt="">
+                                    <a class='img-link' href="./relaxed.html"></a>
+                                </div>
+                        </div>
+                        <div class="img-container second">
+                            <div class="phone-container">
+                                <img class='phone' src="./img/FAVPNG_iphone-x-cut-out-no-background_1xbuajE1.png" alt="">
+                                <img class='img-phone' src="./img/sr phone.png" alt="">
+                                <a class='img-link' href="./srwatch.html"></a>
+                            </div>
+                            
+                            <div class="laptop-container">
+                                <img class='laptop' src="./img/FAVPNG_laptop-macbook-air-computer-monitors_XfSSS15k.png" alt="">
+                                <a class='img-link' href="./srwatch.html">
+                                    <img class='img-desktop' src="./img/sr.png" alt="">
+                                </a>
+                            </div>
+
+                            
+                        </div>
+                        
+
+                    </div>
+                </section>
+
+                <section id='contacts' class="content">
+                    <h1>Contact Me</h1>
+                    <div class="contacts-content">
+                        <div id="left">
+                            
+                            <p class='contact-list'><img class='contact-icon' src="./img/main/icon/home.png" alt="">Yogyakrta, Indonesia</p>
+                            <p class='contact-list'><img class='contact-icon' src="./img/main/icon/phone.png" alt="">+628233326062</p>
+                            <p class='contact-list'><img class='contact-icon' src="./img/main/icon/fb.png" alt="">Digit Praktika</p>
+                            <p class='contact-list'><img class='contact-icon' src="./img/main/icon/mail.png" alt="">digit.praktika@gmail.com</p>
+                            
+                        </div>
+                        
+                        <div id="right">
+                            <h1 class='quotes'>“Don't tell me the moon is shining; show me the glint of light on broken glass.”</h1>
+                            <h2>- Anton Chekhov -</h2>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    
+      
+    <script type="text/javascript" src="skrollr.js"></script>
+	<script type="text/javascript">
+	    
+	</script>
+    </>
+</html>   
+
+
+
