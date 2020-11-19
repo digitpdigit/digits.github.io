@@ -164,6 +164,8 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -webkit-transform: none !important;
+            transform: none !important;
   }
   .content {
     width: 100vw;
