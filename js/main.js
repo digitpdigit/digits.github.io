@@ -68,7 +68,7 @@ function onChangeMedia(e){
         document.getElementById("footer").style.display = "none";
         document.querySelector(".container").removeAttribute('data-0')
         document.querySelector(".container").removeAttribute('data-800')
-        document.querySelector(".container").style.transform = "none";
+        document.querySelector(".container").style.transform = "none !important";
     }
     else{
         tl.fromTo(_footer, {opacity:0}, {opacity:1, duration:1, display:'flex'}, '>1')
